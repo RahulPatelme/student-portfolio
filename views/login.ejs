@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- This page is for login -->
+<html lang="en">
+    <head>
+        <title>LOGIN</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Link the css here -->
+        <link rel="stylesheet" href="/css/style.css" type="text/css">
+    </head>
+    
+    <body>
+        <!-- make a place for two columns -->
+        <div class="row">
+            <!-- make a column on left side to show the opaic image -->
+            <div class="column side">
+                <img src="/images/otago.png" id="otago">
+            </div>
+            <!-- make another column on right side to show the login form to user -->
+            <div class="column middle">
+                <img src="/images/op.png" id="logo">
+                <h1>Welcome Back!</h1>
+                <!-- initialise the action of the form '/login'-->
+                <form id="form" action="/login" method="post">
+                    <!-- user must to input their own email address and password in form -->
+                    <input type="text" name="logemail" id="logemail" class="form2" placeholder="&#128231; E-mail" required><br>
+                    <input type="password" name="logpassword" id="logpassword" class="form2" placeholder="&#128274; password" required><br><br>
+                    <!-- if user inputs wrong email and password, it will show the error message -->
+                    <input type="submit" value="LOGIN" id="submitform"><br><br>
+                    <!-- if user does not have an account, it will direct the user to sign up page -->
+                    <a class="loginbutton" href="/signup">Don't have an account?</a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

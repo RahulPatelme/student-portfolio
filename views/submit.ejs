@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--This code is for the "submit" page-->
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <meta content="description" name="description">
+        <meta name="google" content="notranslate" />
+        <meta name="msapplication-tap-highlight" content="no">
+        <title>Submit Portfolio</title>
+        <!--Stylesheet-->
+        <link href="/css/maindesign.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--Header-->
+        <header>
+            <nav class="navbar navbar-default active">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#" title="">
+                            <img src="" class="navbar-logo-img" alt="">
+                            Otago Polytechnic (AIC)
+                        </a>
+                    </div>
+                    <!--Navbar Buttons-->
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/home" title="">Home</a></li>
+                            <li><a href="/showcase" title="">Showcase</a></li>
+                            <li>
+                                <p>
+                                    <a href="/logout" class="btn btn-default navbar-btn" title="">Logout</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- FORM -->
+        <div class="container">
+            <style>
+                b {
+                    color: #333333;
+                }
+
+            </style>
+            <!--Page Title-->
+            <h1 class="text-center">Submit Project Details</h1>
+            <br>
+            <hr>
+            <!--"Name" Text Field-->
+            <label for="formGroupExampleInput" class="font-weight-bold"><b>Name</b></label>
+            <div>
+                <form action="/submit" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name" name="fname" value="" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name" name="lname" value="" required>
+                            </div>
+                        </div>
+                        <br>
+                        <!--"Email" Text Field-->
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1" class="font-weight-bold"><b>Enter Your Registered Email Address</b></label>
+                            <input type="email" class="form-control" name="email" placeholder="name@example.com" value="" required>
+                        </div>
+                        <br>
+                        <!--"Department" Select Field-->
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1" class="font-weight-bold"><b>Select Your Department</b></label>
+                            <select class="form-control" name="department" id="exampleFormControlSelect1">
+                                <option>Business</option>
+                                <option>Construction</option>
+                                <option>English Language</option>
+                                <option>Information Technology</option>
+                            </select>
+                        </div>
+                        <br>
+                        <!--"Project Title" Text Field-->
+                        <div class="form-group">
+                            <label for="formGroupExampleInput" class="font-weight-bold"><b>Project Title</b></label>
+                            <input type="text" class="form-control" name="PTitle" id="formGroupExampleInput" placeholder="Title for your project" value="" required>
+                        </div>
+                        <br>
+                        <!--"Project Description" Text Field-->
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1" class="font-weight-bold"><b>Project Description</b></label>
+                            <textarea class="form-control" name="Description" id="exampleFormControlTextarea1" placeholder="Describe your project" rows="5" value="" required></textarea>
+                        </div>
+                        <br>
+                        <!--"Upload Image" File Field-->
+                        <div>
+                            <div>
+                                <label for="image" class="font-weight-bold"><b>Upload Image</b></label>
+                                <input type="file" id="image" name="image" value="" required>
+                            </div>
+                            <br>
+                            <!--"Image Title" Text Field-->
+                            <div>
+                                <label for="name" class="font-weight-bold"><b>Image Title</b></label>
+                                <input type="text" id="name" class="form-control" placeholder="Image name" value="" name="ITitle" required>
+                            </div>
+                            <br>
+                            <!--"Project Link" URL Field-->
+                            <label for="url" class="font-weight-bold"><b>Enter Your Project Link (Optional)</b></label>
+
+                            <input type="url" name="url" id="url" class="form-control" placeholder="https://example.com" pattern="https://.*" size="30">
+                            <br>
+                            <!--"Group Project" Grid Check-->
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="group" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck"><b>Group Project</b></label>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit"><b>Submit</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr>
+        </div>
+
+        <!--Footer-->
+        <footer class="footer-container white-text-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 style="font-family: monospace">Otago Polytechnic</h3>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-7">
+                                <p><small>Made with love by OPAIC students.</small></p>
+                            </div>
+                            <!--Social Media Icons-->
+                            <div class="col-xs-12 col-sm-5">
+                                <p class="text-right">
+                                    <a href="https://www.facebook.com/OtagoPolyAIC/" class="social-round-icon white-round-icon fa-icon" title="">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://twitter.com/OPAuckland?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-round-icon white-round-icon fa-icon" title="">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://nz.linkedin.com/school/otago-polytechnic-auckland-international-campus/" class="social-round-icon white-round-icon fa-icon" title="">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                navActivePage();
+                scrollRevelation('.reveal');
+            });
+
+        </script>
+        <script type="text/javascript" src="/javascript/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- This page is for registration -->
+<html lang="en">
+    <head>
+        <title>Registration</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Link the css here -->
+        <link rel="stylesheet" href="/css/style.css" type="text/css">
+    </head>
+    
+    <body>
+        <!-- make a place for two columns -->
+        <div class="row">
+            <!-- make a column on left side to show the opaic image -->
+            <div class="column side">
+                <img src="/images/otago.png" id="otago">
+            </div>
+            <!-- makae another column on right side to show the login form to user -->
+            <div class="column middle">
+                <img src="/images/op.png" id="logo">
+                <h1>Create Account</h1>
+                <!-- initialise the action of the form '/signup' -->
+                <!-- onsubmit event to validate user password -->
+                <form id="signup" action="/signup" method="post" onsubmit="event.preventDefault(); validateMyForm();">
+                    <!-- user must to input username, email address, and password -->
+                    <input type="text" name="username" id="username" class="form2" placeholder="&#128100; username" required><br>
+                    <input type="email" name="email" id="email" class="form2" placeholder="&#128231; email" required><br>
+                    <input type="password" name="password" id="password" class="form2" placeholder="&#128274; password" required><br>
+                    <input type="password" name="passwordConf" placeholder="&#128274; Confirm Password" class="form2" id="password_conf" required><br>
+                    <!-- if user inputs the existed username or email, it will show error message -->
+                    <input type="submit" value="SIGNUP" id="submitform"><br><br>
+                    <!-- if user has an account, it will direct user to log in page -->
+                    <a href="/login">Already have an account? Log in</a>
+                </form>
+            </div>
+        </div>
+        <!--this is the script for validate the password, whether the passwords match-->
+        <script type="text/javascript">
+            //create a variable for the password input as passField
+            var passField = document.getElementById('password');
+            //create another variable for password confirm input as passConField
+            var passConField = document.getElementById('password_conf');
+            //create variable for the signup form 
+            var form = document.getElementById('signup');
+            //create a function to validate password and confirm password
+            function validateMyForm(){
+                //if password does not match to confirm password, it will show the alert
+                if(passField.value != passConField.value){ 
+                    alert("Passwords do not match. Please try again.");
+                    //if it is not, it will submit the form
+                } else {
+                    form.submit();
+                }
+            }
+        </script>
+    </body>
+</html>
